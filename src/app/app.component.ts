@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WakandaService } from './shared/wakanda.service';
-import Collection from 'wakanda-client/dist/ts-build/presentation/collection';
+import { Collection } from 'wakanda-client';
 import { NavigableFilesService } from './shared/navigable-files.service';
 import { IFileStorage } from './shared/file-storage.model';
 
@@ -10,7 +10,7 @@ import { IFileStorage } from './shared/file-storage.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  list: Collection;
+  list: Collection<IFileStorage>;
   current: IFileStorage;
   ds;
 

@@ -1,4 +1,6 @@
-export interface IFileStorage {
+import { Entity } from 'wakanda-client';
+
+export interface IFileStorage extends Entity {
   ID: string;
   name: string;
   codedName: string;
@@ -12,13 +14,9 @@ export interface IFileStorage {
   operationType: string;
   virtualDeleted: string;
   userRef: string;
-  _key?: string;
-  save(): void;
-  delete(): void;
-  fetch(): void;
 }
 
-export interface  IPostAnswer {
+export interface  IPostAnswer extends Entity {
   id: string;
   filename: string;
   filenameID: string;

@@ -1,5 +1,5 @@
-import Collection from 'wakanda-client/dist/ts-build/presentation/collection';
-import { throwToolbarMixedModesError } from '@angular/material/toolbar';
+import { Collection } from 'wakanda-client';
+import { IFileStorage } from './file-storage.model';
 
 export class NavigableDS {
   index = 0;
@@ -7,7 +7,7 @@ export class NavigableDS {
   hasPrevious = false;
 
   constructor(
-    private collection: Collection,
+    private collection: Collection<IFileStorage>,
     initialIndex = 0,
   ) {
     this.index = initialIndex;
